@@ -168,3 +168,26 @@ public class act6 {
     }
 }
 ```
+## Bloque 2
+Una empresa de transporte nos ha encargado un programa que le ajyude a hacer algunos cálculos. La empresa suele transportar líquidos o matérias primas como tierra, grava, arena o similares, es decir, mide el transporte según el volumen del material a transportar. Quiere que el programa le determine cuantos viajes le hacen falta para completar cada encargo.
+### Ejercicio 7
+Haz dos funciones para calcular las capacidades de los camiones. Los camiones pueden ser cisterna (cilíndricos) o tipo caja (primsa rectangular). Por tanto:  
+a) Define la función **volumCilindre** que recibirá como parámetros el radio y la longitud (siempre positivos) del depósito en centímetros y devolverá el volumen en centímetros cúbicos. V = pi * r^2 * l  
+b) Define la función **volumPrismaRectangular** que recibirá como parámetros las medidas de las aristas en centímetros (positivos) y devolverá el volumen en centímetros cúbicos. V = lado1 * lado2 * lado3
+```java
+public class act7 {
+    public static void main(String[] args) {
+
+    }
+
+    public static double volumCilindre(double radio, double longitud) {
+        double volumen = Math.PI * Math.pow(radio, 2) * longitud;
+        return volumen;
+    }
+
+    public static double volumPrismaRectangular(double lado1, double lado2, double lado3) {
+        double volumen = lado1 * lado2 * lado3;
+        return volumen;
+    }
+}
+```
