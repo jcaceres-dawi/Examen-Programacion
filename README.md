@@ -89,6 +89,8 @@ _3. És parell?_
 _4. Calcular parells de 0 fins a n_  
 _0. Sortir_
 ```java
+import java.util.Scanner;
+
 public class act5 {
     public static void main(String[] args) {
         menu();
@@ -177,6 +179,71 @@ b) Define la función **volumPrismaRectangular** que recibirá como parámetros 
 ```java
 public class act7 {
     public static void main(String[] args) {
+
+    }
+
+    public static double volumCilindre(double radio, double longitud) {
+        double volumen = Math.PI * Math.pow(radio, 2) * longitud;
+        return volumen;
+    }
+
+    public static double volumPrismaRectangular(double lado1, double lado2, double lado3) {
+        double volumen = lado1 * lado2 * lado3;
+        return volumen;
+    }
+}
+```
+### Ejercicio 8
+Haz un **main** que:  
+a) Pregunte al usuario si el transporte será de líquidos o sólidos. Si la opción que introduce no es válida, tiene que volver a preguntar.  
+b) Pregunte al usuario el volumen que se ha de transportar en metros cúbicos.  
+c) Calcule cuantos de viajes ha de hacer.
+```java
+import java.util.Scanner;
+
+public class act8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int opcion = 0;
+        double volumen = 0;
+        double viajes = 0;
+
+        while (opcion != 1 && opcion != 2) {
+            System.out.println("Que vas a transportar? 1.Líquidos 2. Sólidos");
+            opcion = sc.nextInt();
+        }
+
+        if (opcion == 1) {
+            double radio;
+            double longitud;
+            System.out.println("Cuantos centímetros de radio tiene la cisterna?");
+            radio = sc.nextDouble();
+            System.out.println("Cuantos centímetros de longitud tiene la cisterna?");
+            longitud = sc.nextDouble();
+            volumen = volumCilindre(radio, longitud);
+        }
+
+        if (opcion == 2) {
+            double lado1;
+            double lado2;
+            double lado3;
+            System.out.println("Cuantos centímetros tiene el primer lado?");
+            lado1 = sc.nextDouble();
+            System.out.println("Cuantos centímetros tiene el segundo lado?");
+            lado2 = sc.nextDouble();
+            System.out.println("Cuantos centímetros tiene el tercer lado?");
+            lado3 = sc.nextDouble();
+            volumen = volumPrismaRectangular(lado1, lado2, lado3);
+
+        }
+
+        System.out.println("Cuantos metros cúbicos tenemos que transportar?");
+        double metroscubicos = sc.nextInt();
+
+        System.out.println("El camión puede transportar " + volumen + " centímetros cúbicos");
+        System.out.println("Caben " + volumen / 1000000 + " metros cúbicos");
+        viajes = Math.ceil(metroscubicos / (volumen / 1000000));
+        System.out.println("Tienes que hacer " + viajes + " viajes");
 
     }
 
