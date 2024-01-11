@@ -1,7 +1,7 @@
 # Examen Programación
 ## Bloque 1
 ### Ejercicio 1
-Haz una función **decimalBinario** que reciba por parámetro un número entero decimal y lo muestre por pantalla en binario. Con una cifra por línea y puede estar invertido. Se asume que el número que se pasa por parámetro siempre es positivo.
+Haz una función **decimalBinari** que reciba por parámetro un número entero decimal y lo muestre por pantalla en binario. Con una cifra por línea y puede estar invertido. Se asume que el número que se pasa por parámetro siempre es positivo.
 ```java
 public class act1 {
 
@@ -21,7 +21,7 @@ public class act1 {
 }
 ```
 ### Ejercicio 2
-Haz una función **binarioDecimal** que reciba por parámetro un número entero binario (tipo long) y muestre por pantalla el número decimal. Para pasar de binario a decimal se tiene que multiplicar cada término por 2^n donde n es la posición que ocupa el dígito (de derecha a izquierda y empezando en 0) y sumar el resultado de todas las multiplicaciones.
+Haz una función **binariDecimal** que reciba por parámetro un número entero binario (tipo long) y muestre por pantalla el número decimal. Para pasar de binario a decimal se tiene que multiplicar cada término por 2^n donde n es la posición que ocupa el dígito (de derecha a izquierda y empezando en 0) y sumar el resultado de todas las multiplicaciones.
 ```java
 public class act2 {
     public static void main(String[] args) {
@@ -41,6 +41,24 @@ public class act2 {
             exponente++;
         }
         System.out.println(decimal);
+    }
+}
+```
+### Ejercicio 3
+Haz una función **esParell** que reciba por parámetro un número entero y devuelva un booleano _true_ si es par o _false_ si no lo es.
+```java
+public class act3 {
+    public static void main(String[] args) {
+        int num = 58383834;
+        System.out.println(esParell(num));
+    }
+
+    public static boolean esParell(int num) {
+        if (num % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 ```
