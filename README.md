@@ -108,3 +108,63 @@ public class act5 {
     }
 }
 ```
+### Ejercicio 6
+Implementa el **main**, que consiste en:  
+a) Mostrar el _menu_ principal, si el usuario introduce un 0, el programa acaba, si introduce una opción inválida se le informa y se le vuelve a mostrar el menú.  
+b) Preguntar los datos necesarios para ejecutar la función que corresponde haciendo uso de los ejercicios anteriores.  
+c) Vuelve a mostrar el menú
+```java
+import java.util.Scanner;
+
+public class act6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int opcion = menu();
+        switch (opcion) {
+            case 0:
+                System.exit(opcion);
+                break;
+            case 1:
+                System.out.println("Escribe un número entero decimal");
+                int decimal = sc.nextInt();
+                decimalBinari(decimal);
+                opcion = menu();
+                break;
+            case 2:
+                System.out.println("Escribe un número binario");
+                int binario = sc.nextInt();
+                binarioDecimal(binario);
+                opcion = menu();
+                break;
+            case 3:
+                System.out.println("Escribe un número para saber si es par");
+                int num1 = sc.nextInt();
+                System.out.println(esParell(num1));
+                opcion = menu();
+                break;
+            case 4:
+                System.out.println("Escribe un número para saber los pares entre 0 y el número");
+                int num2 = sc.nextInt();
+                primersNombresParells(num2);
+                opcion = menu();
+                break;
+            default:
+                System.out.println("Opció no vàlida");
+                opcion = menu();
+                break;
+        }
+    }
+
+    public static int menu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tria una de les següents opcions:");
+        System.out.println("1. Decimal a binari");
+        System.out.println("2. Binaria a decimal");
+        System.out.println("3. És parell?");
+        System.out.println("4. Calcular parells de 0 fins a n");
+        System.out.println("0. Sortir");
+        int opcion = sc.nextInt();
+        return opcion;
+    }
+}
+```
