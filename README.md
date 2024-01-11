@@ -80,3 +80,31 @@ public class act4 {
     }
 }
 ```
+### Ejercicio 5
+Haz una función **menu** que muestre el siguiente menú por pantalla y devuelva la opción escogida por el usuario en formato número entero.
+_Tria una de les següents opcions:_  
+_1. Decimal a binari_  
+_2. Binaria a decimal_  
+_3. És parell?_  
+_4. Calcular parells de 0 fins a n_  
+_0. Sortir_
+```java
+public class act5 {
+    public static void main(String[] args) {
+        menu();
+    }
+
+    public static int menu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tria una de les següents opcions:");
+        System.out.println("1. Decimal a binari");
+        System.out.println("2. Binaria a decimal");
+        System.out.println("3. És parell?");
+        System.out.println("4. Calcular parells de 0 fins a n");
+        System.out.println("0. Sortir");
+        int opcion = sc.nextInt();
+        sc.close();
+        return opcion;
+    }
+}
+```
