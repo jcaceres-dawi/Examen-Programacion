@@ -81,7 +81,7 @@ public class act4 {
 }
 ```
 ### Ejercicio 5
-Haz una función **menu** que muestre el siguiente menú por pantalla y devuelva la opción escogida por el usuario en formato número entero.
+Haz una función **menu** que muestre el siguiente menú por pantalla y devuelva la opción escogida por el usuario en formato número entero.  
 _Tria una de les següents opcions:_  
 _1. Decimal a binari_  
 _2. Binaria a decimal_  
@@ -171,7 +171,7 @@ public class act6 {
 }
 ```
 ## Bloque 2
-Una empresa de transporte nos ha encargado un programa que le ajyude a hacer algunos cálculos. La empresa suele transportar líquidos o matérias primas como tierra, grava, arena o similares, es decir, mide el transporte según el volumen del material a transportar. Quiere que el programa le determine cuantos viajes le hacen falta para completar cada encargo.
+Una empresa de transporte nos ha encargado un programa que le ayude a hacer algunos cálculos. La empresa suele transportar líquidos o materias primas como tierra, grava, arena o similares, es decir, mide el transporte según el volumen del material a transportar. Quiere que el programa le determine cuantos viajes le hacen falta para completar cada encargo.
 ### Ejercicio 7
 Haz dos funciones para calcular las capacidades de los camiones. Los camiones pueden ser cisterna (cilíndricos) o tipo caja (primsa rectangular). Por tanto:  
 a) Define la función **volumCilindre** que recibirá como parámetros el radio y la longitud (siempre positivos) del depósito en centímetros y devolverá el volumen en centímetros cúbicos. V = pi * r^2 * l  
