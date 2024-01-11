@@ -62,3 +62,21 @@ public class act3 {
     }
 }
 ```
+### Ejercicio 4
+Haz una función **primersNombresParells** que reciba por parámetro un número entero _n_ y muestre por pantalla todos los nombres pares entre 0 (incluido) y _n_ (incluido si es necesario). Se asume que el número _n_ es siempre positivo.
+```java
+public class act4 {
+    public static void main(String[] args) {
+        int num = 10;
+        primersNombresParells(num);
+    }
+
+    public static void primersNombresParells(int num) {
+        for (int i = 0; i <= num; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+```
